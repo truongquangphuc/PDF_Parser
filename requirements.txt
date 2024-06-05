@@ -1,0 +1,5 @@
+llama-index
+llama-parse
+nest_asyncio
+streamlit
+python-dotenv
