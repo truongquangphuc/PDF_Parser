@@ -8,7 +8,7 @@ import streamlit as st
 nest_asyncio.apply()
 # Load environment variables
 load_dotenv()
-
+os.environ['LLAMA_CLOUD_API_KEY'] = st.secrets["LLAMA_CLOUD_API_KEY"]
 def extract_text_from_pdf(pdf_path):
     documents = LlamaParse(language="vi", result_type="markdown").load_data(pdf_path)
     return documents[0].text if documents else ""
